@@ -1,0 +1,110 @@
+.principal{
+	.current_account{
+		background:@bg;
+		border:@border;
+		height:100%;
+		padding:30px 10px;
+		min-height:350px;
+		display:block;
+		.box-sizing;
+		width:500px;
+		margin:10% auto 0;
+		.btn_add{
+			.btn_ico_only;
+			background:@call_to_action;
+			margin:-5px 0 0 25px;
+			&:before{
+				content:"+";
+				font-size:@font + 2;
+				font-weight:600;
+				float:left;
+			}
+		}
+		ul{
+			li{
+				float:left;
+				margin:0px;
+				padding:0px;			
+				label{					
+					position:relative;
+					z-index:1;
+					margin:0 0 0 5px;
+					.custom_radio;
+					&.add{
+						input{
+							margin: -5px 0 0 15px;
+						}
+					}
+					input[type="radio"] + span::before{
+						margin:4px 4px 0 10px;
+					}
+					span{
+						.small_title_font;
+						color:@primary;
+					}
+				}
+			}
+		}
+		.table_values{
+			width:100%;
+			display:inline-block;
+			margin:30px 0 0 0;
+			border:@border;
+			ul{
+				li{
+					display:table;
+					padding:10px;
+					&:first-child{						
+						background:lighten(@gray, 40%) !important;
+						font-family: Arial,sans-serif;
+						font-size: @font + 1 !important; 
+						font-weight:bold  !important;
+						color:@bg;	
+					}
+					&:nth-child(odd){
+						background:darken(@bg, 2%);
+					}
+					&:nth-child(even){
+						background:darken(@bg, 5%);
+					}
+					p{
+						display:table-cell;
+						width:5%;
+						padding:10px;					
+						position:relative;
+						z-index:0;
+						text-align:center;
+						a{
+							&.remove{
+								.btn_ico_only;
+								position:absolute;
+								top:2px;
+								right:15px;
+								z-index:1;
+								&:before{
+									float:left;
+									.icon-exclude;
+									font-size:@font + 2;
+								}
+							}
+						}
+					}					
+				}
+			}
+		}
+		.total_values{
+			width:100%;
+			margin:20px 0 0 0;
+			padding:0px;
+			display:block;
+			p{
+				width:100%;
+				margin:0px;
+				padding:0px;
+				display:block;
+				text-align:center;
+				.small_title_font;
+			}
+		}
+	}
+}

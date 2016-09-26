@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<!--Favicon para todos os dispositivos - Fim -->
+
+<meta name="distributor" content="Global">
+<meta itemprop="contentRating" content="General">
+<meta name="robots" content="All">
+<meta name="revisit-after" content="7 days">
+
+<meta name="description" content="">
+<meta name="keywords" content="">     
+
+<link href="css/teste.css" rel="stylesheet" id="theme-stylesheet" media="screen"/>
+<!-- Responsivo - Inicio -->
+<link href="css/beneclube_responsive.css" rel="stylesheet" id="theme-stylesheet" media="screen"/>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+
+<title>Novo Projeto- Conta</title>
+</head>
+
+<body>
+<div class="principal">
+	<!--Inicio -->
+    <div class="current_account">
+    	<!-- Adicionar Valores - Inicio -->
+        <div class="add_values">
+            <!--Tipo de Valores - Entrada - Inicio -->
+                <ul>
+                    <li>
+                        <label>
+                            <input name="AddByCurrentAccount" value="saque" checked="checked" type="radio">
+                            <span> Saque </span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input name="AddByCurrentAccount" value="deposito" type="radio">
+                            <span>Deposito</span>
+                        </label>                        
+                    </li>
+                    <li>
+                        <label class="add">
+                            <input placeholder="Digite o Valor" class="" type="text">                            
+                        </label>
+                    </li>                       
+                </ul>
+             <!--Tipo de Valores - Entrada - Fim -->
+             <a href="#" class="btn_add">Adicionar</a>
+        </div>
+        <!-- Adicionar Valores - Fim --> 
+        <!--Tabela Valores - Inicio -->
+        <div class="table_values">
+        	<ul>
+            	<li>
+                	<p class="type"> 
+                    	Tipo                 
+                    </p>
+                    <p class="value"> 
+                    	Valor                 
+                    </p>
+                    <p>
+                    	<a href="#">&nbsp;</a>                  
+                    </p>
+                </li>
+               <li class="list_values">
+                	<p class="type"> 
+                    	Depósito                 
+                    </p>
+                    <p class="value"> 
+                    	R$100,00                 
+                    </p>
+                    <p>
+                    	<a href="#" class="remove">Remover</a>
+                    </p>
+                </li>  
+               <li class="list_values">
+                	<p class="type"> 
+                    	Depósito                  
+                    </p>
+                    <p class="value"> 
+                    	R$150,00                
+                    </p>
+                    <p>
+                    	<a href="#" class="remove">Remover</a>
+                    </p>
+                </li>  
+                <li class="list_values">
+                	<p class="type"> 
+                    	Saque                  
+                    </p>
+                    <p class="value"> 
+                    	R$200,00           
+                    </p>
+                    <p>
+                    	<a href="#" class="remove">Remover</a>
+                    </p>
+                </li>               
+            </ul>                         
+        </div>
+        <!--Tabela Valores - Fim -->
+        <!--Label Total dos Valores - Inicio  -->   
+        <div class="total_values">
+            <p>Total em Conta: R$375,00</p>
+        </div>
+        <!--Label Total dos Valores - Fim -->   
+    </div>
+    <!--Fim -->
+</div>
+<script>
+	$(document).ready(function(){
+    $('.remove').click(function(){
+        $('.list_values').remove();
+    });
+});
+</script>
+});
+
+
+</script>
+
+
+</body>
+</html>

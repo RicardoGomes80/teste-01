@@ -1,0 +1,134 @@
+/*******************lesscss controls*******************/
+* {
+	margin: 0;
+	padding: 0;
+	outline:none;
+}  
+.error{
+	color:@error;
+}
+.success{
+	color:@success;
+}
+li { list-style:none;  }
+a {
+	outline: none;
+	text-decoration:none;
+	font-size: @font + 2;
+	font-family: Roboto,Helvetica,Arial,sans-serif;
+	color: @gray;
+}
+.opacity_45 {
+	opacity:.45;
+	-moz-opacity:.45;
+	filter:alpha(opacity=45);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=45)";
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+} 
+.ui-state-disabled {
+	/*opacity:0.35;*/
+	cursor:default;
+}
+.background-none {
+	background: none !important;
+}
+.opaco {
+	color: @gray !important;
+	cursor: text !important;
+}
+.disable{
+	.opacity_45;
+}
+.odd {
+	background:lighten(@gray, 48%);
+	td {
+		background:lighten(@gray, 48%);
+	}
+}
+img{
+	border:none;	
+}
+
+/* General */
+.full_width_border { width: @full_width -1%;}
+.replace {
+	font-size: 0;
+	overflow: hidden;
+	text-indent: -3000px;
+}
+
+.show { display: block; }
+.hidden, .hideElement, .hide { display: none; }
+.left { float: left; }
+.right { float: right; }
+.drag_item {
+	cursor: url('images/hand_draggable.png'), auto;
+}
+
+.pointer {
+	cursor: pointer;
+} 
+
+input, select{	
+	color: @gray;
+	.rounded(0);
+	&:disabled{
+		.disable;
+		pointer-events:none;
+		outline:none;
+	}
+}
+
+input{
+	&.autocomplete_empty{
+		.box-sizing;
+		background: url("images/ico.png") no-repeat right -279px @inputs_bg;
+		text-indent: 18px;
+		vertical-align: text-top;
+		padding: 0 15px 0 3px; 
+	}
+	&.autocomplete_loading{
+		.box-sizing;
+		background: url("images/loading_autocomplete.gif") no-repeat right 13px @inputs_bg;
+		text-indent: 18px;
+		vertical-align: text-top;
+		padding: 0 15px 0 3px; 
+	}
+	&.autocomplete_completed{
+		   background-image: none;
+		   padding-right: 0;
+	}
+}
+.toggle_switch {
+	float: left; 
+	a {  
+		.btn_text_ico; 
+		white-space: nowrap;
+		position: relative;   
+    	z-index: 1; 
+		&:before {
+			.icon-radio;
+		} 
+		&.active { 
+			cursor: default;
+			margin: 0 -4px;
+			&:before { 
+				.icon-radio_check;
+			}
+			&:hover {
+				.drop-shadow(inset 0, 0, 0px, 0);
+			}
+		} 
+	}  
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800);
+body {
+	background:#f1f1f1;
+	margin:0px;
+	padding:0px;
+	color:@gray;
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-size: @font + 1; 
+}
